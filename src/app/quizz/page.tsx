@@ -130,7 +130,7 @@ export default function Home() {
     return ( <QuizzSubmittion scorePercentage={Math.round(score / questions.length * 100) as number} score={score} totalQuestions={questions.length} /> )
   }
   return (
-    <div className="flex flex-col flex-1">
+    <>
       <div className="position-sticky top-0 z-10 shadow-md py-4 w-full">
         <header className="grid grid-cols-[auto,1fr,auto] grid-flow-col items-center justify-between py-2 gap-2">
           {started ? (
@@ -197,6 +197,6 @@ export default function Home() {
           {!started ? "Start" : (currentQuestion === questions.length - 1) ? "Submit" : "Next"} 
         </Button>
       </footer>
-    </div>
+    </>
   );
 }
